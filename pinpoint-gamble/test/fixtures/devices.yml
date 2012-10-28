@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  uuid: MyString
+  type: 
+  os: MyString
+  resolution: MyString
+
+two:
+  uuid: MyString
+  type: 
+  os: MyString
+  resolution: MyString

@@ -1,0 +1,31 @@
+<h1>Listing broadcasts</h1>
+
+<table>
+  <tr>
+    <th>Lat</th>
+    <th>Lng</th>
+    <th>X</th>
+    <th>Y</th>
+    <th>Inside</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @broadcasts.each do |broadcast| %>
+  <tr>
+    <td><%= broadcast.lat %></td>
+    <td><%= broadcast.lng %></td>
+    <td><%= broadcast.x %></td>
+    <td><%= broadcast.y %></td>
+    <td><%= broadcast.inside %></td>
+    <td><%= link_to 'Show', broadcast %></td>
+    <td><%= link_to 'Edit', edit_broadcast_path(broadcast) %></td>
+    <td><%= link_to 'Destroy', broadcast, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Broadcast', new_broadcast_path %>

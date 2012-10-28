@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Lat:</b>
+  <%= @broadcast.lat %>
+</p>
+
+<p>
+  <b>Lng:</b>
+  <%= @broadcast.lng %>
+</p>
+
+<p>
+  <b>X:</b>
+  <%= @broadcast.x %>
+</p>
+
+<p>
+  <b>Y:</b>
+  <%= @broadcast.y %>
+</p>
+
+<p>
+  <b>Inside:</b>
+  <%= @broadcast.inside %>
+</p>
+
+
+<%= link_to 'Edit', edit_broadcast_path(@broadcast) %> |
+<%= link_to 'Back', broadcasts_path %>

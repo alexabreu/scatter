@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Uuid:</b>
+  <%= @device.uuid %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @device.type %>
+</p>
+
+<p>
+  <b>Os:</b>
+  <%= @device.os %>
+</p>
+
+<p>
+  <b>Resolution:</b>
+  <%= @device.resolution %>
+</p>
+
+
+<%= link_to 'Edit', edit_device_path(@device) %> |
+<%= link_to 'Back', devices_path %>
