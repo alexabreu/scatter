@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121028220835) do
+ActiveRecord::Schema.define(:version => 20121101013055) do
 
   create_table "broadcasts", :force => true do |t|
     t.float    "lat"
@@ -52,6 +52,8 @@ ActiveRecord::Schema.define(:version => 20121028220835) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "username"
+    t.string   "authentication_token"
   end
 
   add_index "players", ["email"], :name => "index_players_on_email", :unique => true

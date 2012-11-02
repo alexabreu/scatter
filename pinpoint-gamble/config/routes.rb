@@ -1,13 +1,22 @@
 PinpointGamble::Application.routes.draw do
-  devise_for :players
+  devise_for :players, :controllers => { :sessions => "player_sessions" }
+  
+  devise_scope :player do
+  	get "logout" => "player_sessions#destroy"
+  	get "login"  => "player_sessions#create"
+  end
+  
+  namespace :api do
+  	namespace :v1 do
+   	    get "/session" => "players#session", as: "token"
+   	    
+    	resources :devices
+	    resources :broadcasts
+	    resources :games
+   	    resources :players
+    end
+  end
 
-  resources :devices
-
-  resources :broadcasts
-
-  resources :games
-
-  resources :players
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
